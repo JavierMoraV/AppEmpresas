@@ -32,8 +32,8 @@ public class NewServlet1 extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String nombre = request.getParameter("nombre");
-            String rut = request.getParameter("rut");
-            String dv = request.getParameter("dv");
+            String rut = request.getParameter("RUT");
+            String dv = request.getParameter("DIG");
             String ap = request.getParameter("ap");
             String am = request.getParameter("am");
             String date = request.getParameter("date");
@@ -43,6 +43,7 @@ public class NewServlet1 extends HttpServlet {
             String direccion = request.getParameter("direccion");
             String nacionalidad = request.getParameter("nacionalidad");
             String password = request.getParameter("password");
+            
             if(nombre.length()>0){
                 out.print("nombre: " + nombre + "<br>");
             }else{
@@ -62,31 +63,31 @@ public class NewServlet1 extends HttpServlet {
             }
             
             if(ap.length()>0){
-                out.print("apellido paterno: "+ap + "<br>");
+                out.print("apellido paterno: "+ ap + "<br>");
             }else{
                 out.print("apellido paterno no ingresado <br>");
             }
             
             if(am.length()>0){
-                out.print("apellido materno: "+am + "<br>");           
+                out.print("apellido materno: "+ am + "<br>");           
             }else{
                 out.print("apellido materno no ingresado <br>");
             }
             
             if(fono.length()>0){
-                out.print("Telefono: "+fono + "<br>");
+                out.print("Telefono: "+ fono + "<br>");
             }else{
                 out.print("Telefono materno no ingresado <br>");
             }
             
             if(correo.length()>0){
-                out.print("correo: "+correo + "<br>");
+                out.print("correo: "+ correo + "<br>");
             }else{
                 out.print("correo no ingresado <br>");
             }
             
             if(sexo.length()>0){
-                out.print("sexo: "+sexo + "<br>");
+                out.print("sexo: "+ sexo + "<br>");
             }else{
                 out.print("sexo no ingresado <br>");
             }
